@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Ordly</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            color: #9FB7C3;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        .tab {
+            padding: 10px 15px;
+            background-color: #f4f4f9;
+            color: #9FB7C3;
+            text-decoration: none;
+            border: 2px solid #9FB7C3;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .tab:hover {
+            background-color: #9FB7C3;
+            color: white;
+        }
+        .tab:active {
+            background-color: #5a637d;
+            color: white;
+        }
+        .tab.active {
+            background-color: #9FB7C3;
+            color: white;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 10px;">
+        <select id="lang-select" style="padding: 6px 12px; border-radius: 6px; border: 1px solid #9FB7C3; color: #333;">
+            <option value="sv" selected>Svenska</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+    <script>
+        document.getElementById('lang-select').addEventListener('change', function() {
+            if (this.value === 'en') {
+                window.location.href = 'index.html';
+            } else {
+                window.location.href = 'index-sv.html';
+            }
+        });
+    </script>
+
+    <header style="border-bottom: 2px solid #9FB7C3; padding-bottom: 10px; margin-bottom: 20px;">
+        <div class="tabs">
+            <a href="index-sv.html" class="tab active">Om Ordly</a>
+            <a href="privacy-policy-sv.html" class="tab">Sekretesspolicy</a>
+            <a href="contact-sv.html" class="tab">Kontakt</a>
+            <a href="apk-download-sv.html" class="tab">Ladda ner APK</a>
+        </div>
+    </header>
+
+    <h1>Om Ordly</h1>
+
+    <p>Älskar du ordspel? Då är Ordly spelet för dig! Varje dag får du ett nytt ord att lista ut på sex försök. Använd dina bästa strategier, låt hjärnan arbeta och se hur snabbt du kan knäcka dagens ord!</p>
+
+    <h2>Hur funkar det?</h2>
+    <p>Skriv in ett ord och få direkt feedback!</p>
+    <ul>
+        <li>Blå bokstav = Rätt bokstav på rätt plats.</li>
+        <li>Orange bokstav = Finns i ordet men på fel plats.</li>
+        <li>Svart bokstav = Finns inte i ordet alls.</li>
+    </ul>
+
+    <h2>Spara dina framgångar</h2>
+    <p>Registrera ett konto med din e-post och ett användarnamn för att spara din statistik och se hur du förbättras över tid!</p>
+
+    <h2>Dagliga utmaningar</h2>
+    <p>Ett nytt ord varje dag – hur många kan du klara i rad?</p>
+
+    <p>Ladda ner Ordly nu och börja gissa!</p>
+</body>
+</html>
